@@ -3,6 +3,7 @@ const { COMMANDS } = require("./constants");
 let connection;
 
 const handleUserInput = function(key) {
+  // terminate on ctrl + c
   if (key === '\u0003') {
     process.exit();
   }

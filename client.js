@@ -11,13 +11,15 @@ const connect = function() {
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
+  // confirm successful connection and send client name to server
   conn.on("connect", () => {
     console.log("Successfully connected!")
-    conn.write("Name: AAA"); // send client name
+    conn.write("Name: AAA"); 
   });
 
+  // log data received from server
   conn.on("data", (data) => {
-    console.log(data); // log data received from server
+    console.log(data); 
   });
 
   return conn;
