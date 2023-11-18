@@ -8,7 +8,7 @@ Before you can run this client, you will need to be running the server side whic
 
 ## Final Product
 
-!["Screenshot of client (left) and server (right) console view"](./Snake%20Screenshot.png)
+!["Screenshot of client (left) and server (right) console view"](./SnakeScreenshot.png)
 
 
 
