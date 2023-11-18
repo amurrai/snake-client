@@ -2,12 +2,11 @@ const { COMMANDS } = require("./constants");
 
 let connection;
 
-const handleUserInput = function (key) {
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
   connection.write(COMMANDS[key]);
-
 };
 
 const setupInput = (conn) => {
