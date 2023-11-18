@@ -12,7 +12,7 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   // confirm successful connection and send client name to server
-  conn.on("connect", () => {
+  conn.on("connect", (data) => {
     console.log("Successfully connected!")
     conn.write("Name: AAA"); 
   });
