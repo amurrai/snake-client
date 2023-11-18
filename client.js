@@ -22,6 +22,11 @@ const connect = function() {
     console.log(data); 
   });
 
+  // terminate on disconnection
+  conn.on("end", () => {
+    process.exit();
+  })
+
   return conn;
 };
 
