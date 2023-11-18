@@ -12,20 +12,20 @@ const connect = function() {
   conn.setEncoding("utf8");
 
   // confirm successful connection and send client name to server
-  conn.on("connect", (data) => {
-    console.log("Successfully connected!")
-    conn.write("Name: AAA"); 
+  conn.on("connect", () => {
+    console.log("Successfully connected!");
+    conn.write("Name: AAA");
   });
 
   // log data received from server
   conn.on("data", (data) => {
-    console.log(data); 
+    console.log(data);
   });
 
   // terminate on disconnection
   conn.on("end", () => {
     process.exit();
-  })
+  });
 
   return conn;
 };
