@@ -12,6 +12,11 @@ const connect = function () {
 
   conn.on("connect", () => {
     conn.write("Name: AAA");
+    conn.write("Move: up");
+    setInterval(() => {
+      conn.write("Move: up");
+    }, 50);    
+
   });
 
   conn.on("data", (data) => {
